@@ -64,3 +64,10 @@ $args = array(
     'default-image' => get_template_directory_uri() . '/upload/body-bg.jpg',
 );
 add_theme_support( 'custom-background', $args );
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+  return 'class="blog-page-link"';
+}
