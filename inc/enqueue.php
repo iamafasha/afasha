@@ -18,7 +18,7 @@ function afasha_load_styles_and_scripts($hook)
     wp_enqueue_script( 'jquery_isotope',  get_template_directory_uri().'/js/jquery.isotope.min.js', array(), true );
     wp_enqueue_script( 'jquery_magnific_popup',  get_template_directory_uri().'/js/jquery.magnific-popup.min.js', array(), true );
     wp_enqueue_script( 'jquery_flex_slider',  get_template_directory_uri().'/js/jquery.flexslider.js', array(), true );
-    wp_enqueue_script( 'retina',  get_template_directory_uri().'/js/retina-1.1.0.min.js', array(), true );
+    wp_enqueue_script( 'retina',  get_template_directory_uri().'/js/retina.min.js', array('jquery'), true  );
     wp_enqueue_script( 'jquery_nicescroll',  get_template_directory_uri().'/js/jquery.nicescroll.min.js', array(), true );
     wp_enqueue_script( 'script',  get_template_directory_uri().'/js/script.js', array(), true );
 }
