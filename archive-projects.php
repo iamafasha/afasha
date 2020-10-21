@@ -12,7 +12,7 @@
 							<div class="view view-first">
                             <?php 
                                 $pattern = '/(width="|height=")([0-9]+)\"/i';
-                                $x= get_the_post_thumbnail();
+                                $x= get_the_post_thumbnail(null,'medium');
                                 echo preg_replace($pattern, '', $x);
                             ?>
 			                    <div class="mask">
