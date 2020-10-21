@@ -73,7 +73,7 @@
                  ); ?>
                 <div class="info">
                     <a href="mailto::<?php echo get_option( 'admin_email', '' ); ?>" class="mail"><?php echo get_option( 'admin_email', '' ); ?><i class="fa fa-envelope-o"></i></a>
-                    <p class="phone"> <a href="tel:<?php echo get_option( 'phone_number', '' ); ?><"><?php echo get_option( 'phone_number', '' ); ?></a><i class="fa fa-phone"></i></p>
+                    <p class="phone"> <a href="tel:<?php echo get_option( 'phone_number', '' ); ?>"><?php echo get_option( 'phone_number', '' ); ?></a><i class="fa fa-phone"></i></p>
                 </div>
             </div>
         </header>
