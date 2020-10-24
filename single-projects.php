@@ -13,17 +13,17 @@
 
 
                             <?php if ( comments_open() ): ?>
-									<span><i class="fa fa-comment"></i><a href="#"><?php  comments_number(  ); ?></a></span>
-									<?php endif;   ?>
+                            <span><i class="fa fa-comment"></i><a href="#"><?php  comments_number(  ); ?></a></span>
+                            <?php endif;   ?>
 
 
                         </div>
 
                         <?php 
-									if ( comments_open() ):
-										comments_template();
-									endif; 
-								?>
+						    if ( comments_open() ):
+							comments_template();
+							endif; 
+						?>
                     </div>
                 </div>
             </div>

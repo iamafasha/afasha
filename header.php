@@ -29,7 +29,7 @@
     } */
 
     .meter>span {
-        background: url('../images/skills-pattern.png');
+        background: url('<?php echo get_template_directory_uri() ?>/images/skills-pattern.png');
     }
     </style>
 </head>

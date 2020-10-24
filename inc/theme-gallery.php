@@ -1,5 +1,0 @@
-<?php 
-
-/**
- * Custom WP gallery
- */
