@@ -191,7 +191,7 @@ registerBlockType('afasha/service-item',{
 	attributes:{
 		icon: {
 			type:'string',
-			default:"coffee",
+			default:"fa fa-coffee",
 		},
 		name: {
 			type:'string',
@@ -220,7 +220,7 @@ registerBlockType('afasha/service-item',{
 	save(props){
 		return (
 				<div class="service-item">
-					<i class={"fa fa-"+props.attributes.icon}></i>
+					<i class={props.attributes.icon}></i>
 					<div class="serv-border"></div>
 					<h3>{props.attributes.name}</h3>
 				</div>

@@ -1,1 +1,481 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{4:function(e,t,r){}}]),function(e){function t(t){for(var a,l,i=t[0],s=t[1],o=t[2],b=0,m=[];b<i.length;b++)l=i[b],Object.prototype.hasOwnProperty.call(n,l)&&n[l]&&m.push(n[l][0]),n[l]=0;for(a in s)Object.prototype.hasOwnProperty.call(s,a)&&(e[a]=s[a]);for(u&&u(t);m.length;)m.shift()();return c.push.apply(c,o||[]),r()}function r(){for(var e,t=0;t<c.length;t++){for(var r=c[t],a=!0,i=1;i<r.length;i++){var s=r[i];0!==n[s]&&(a=!1)}a&&(c.splice(t--,1),e=l(l.s=r[0]))}return e}var a={},n={0:0},c=[];function l(t){if(a[t])return a[t].exports;var r=a[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,l),r.l=!0,r.exports}l.m=e,l.c=a,l.d=function(e,t,r){l.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(e,t){if(1&t&&(e=l(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(l.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)l.d(r,a,function(t){return e[t]}.bind(null,a));return r},l.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(t,"a",t),t},l.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},l.p="";var i=window.webpackJsonp=window.webpackJsonp||[],s=i.push.bind(i);i.push=t,i=i.slice();for(var o=0;o<i.length;o++)t(i[o]);var u=s;c.push([2,1]),r()}([function(e,t){!function(){e.exports=this.wp.element}()},function(e,t){!function(){e.exports=this.wp.blocks}()},function(e,t,r){"use strict";r.r(t);var a=r(0),n=r(1),c=(r(3),r(4),wp.editor),l=c.MediaPlaceholder,i=c.RichText,s=c.InspectorControls,o=c.MediaUpload,u=wp.components,b=u.PanelBody,m=u.IconButton;Object(n.registerBlockType)("afasha/project-gallery",{title:"Project Gallery",description:"Project Gallery built for afasha theme.",category:"afasha_theme",icon:"format-gallery",supports:{html:!0},attributes:{images:{type:"array",default:[]}},edit:function(e){return Object(a.createElement)("div",{class:"row"},Object(a.createElement)(l,{icon:"format-gallery",className:"hello",labels:{title:"Project Gallery",instructions:"Upload or select images to be displayed"},value:e.attributes.images,allowedTypes:["image"],onSelect:function(t){return e.setAttributes({images:t})},type:"images",multiple:!0}))},save:function(e){return Object(a.createElement)("div",{class:"project-gallery"},Object(a.createElement)("div",{class:"row"},e.attributes.images.map((function(e){return Object(a.createElement)("div",{class:"col-md-2"},Object(a.createElement)("div",{class:"view view-first"},Object(a.createElement)("img",{src:e.url,alt:""}),Object(a.createElement)("div",{class:"mask"},Object(a.createElement)("div",{class:"i-icons"},Object(a.createElement)("a",{class:"zoom",href:e.url},Object(a.createElement)("i",{class:"fa fa-plus"}))))))}))))}}),Object(n.registerBlockType)("afasha/progress-level",{title:"Progress bar",description:"Progress bar for skill.",category:"afasha_theme",icon:"chart-bar",supports:{html:!0},attributes:{percentage:{type:"string",default:"50%"}},edit:function(e){return Object(a.createElement)(i,{key:"editable",tagName:"h2",placeholder:"50%",value:e.attributes.percentage,onChange:function(t){return e.setAttributes({percentage:t})}})},save:function(e){return Object(a.createElement)("div",{className:"meter nostrips frontend"},Object(a.createElement)("span",{style:"width: "+e.attributes.percentage}))}}),Object(n.registerBlockType)("afasha/profile-modal",{title:"Profile Modal",description:"Progress bar for skill.",category:"afasha_theme",icon:"chart-bar",supports:{html:!0},attributes:{name:{type:"string",default:"John Doe"},caption:{type:"string",default:"am the goat"},url:{type:"string",default:""}},edit:function(e){return[Object(a.createElement)(s,{style:{marginBottom:"40px"}},Object(a.createElement)(b,{title:"Background Image Settings"},Object(a.createElement)("p",null,Object(a.createElement)("strong",null,"Select a Background Image:")),Object(a.createElement)(o,{onSelect:function(t){return e.setAttributes({url:t.sizes.full.url})},type:"image",value:e.attributes.url,render:function(e){var t=e.open;return Object(a.createElement)(m,{className:"editor-media-placeholder__button is-button is-default is-large",icon:"upload",onClick:t},"Background Image")}}))),Object(a.createElement)("div",null,Object(a.createElement)("div",{class:"team-post"},Object(a.createElement)("img",{alt:e.attributes.name,src:e.attributes.url}),Object(a.createElement)("div",{class:"team-hover"},Object(a.createElement)("div",{class:"team-data"},Object(a.createElement)(i,{key:"editable",tagName:"h2",placeholder:"50%",value:e.attributes.name,onChange:function(t){return e.setAttributes({name:t})}}),Object(a.createElement)(i,{key:"editable",tagName:"span",placeholder:e.attributes.caption,value:e.attributes.caption,onChange:function(t){return e.setAttributes({caption:t})}})))))]},save:function(e){return Object(a.createElement)("div",null,Object(a.createElement)("div",{class:"team-post"},Object(a.createElement)("img",{alt:e.attributes.name,src:e.attributes.url}),Object(a.createElement)("div",{class:"team-hover"},Object(a.createElement)("div",{class:"team-data"},Object(a.createElement)("h3",null,e.attributes.name),Object(a.createElement)("span",null,e.attributes.caption)))))}}),Object(n.registerBlockType)("afasha/service-item",{title:"Service Item",description:"Progress bar for skill.",category:"afasha_theme",icon:"chart-bar",supports:{html:!0},attributes:{icon:{type:"string",default:"coffee"},name:{type:"string",default:"Coding"}},edit:function(e){return Object(a.createElement)("div",{class:"service-item"},Object(a.createElement)("i",{class:"fa fa-"+e.attributes.icon}),Object(a.createElement)(i,{key:"editable",tagName:"p",placeholder:"FontAwesome Icon Name",value:e.attributes.icon,onChange:function(t){return e.setAttributes({icon:t})}}),Object(a.createElement)("div",{class:"serv-border"}),Object(a.createElement)(i,{key:"editable",tagName:"h3",placeholder:"Title",value:e.attributes.name,onChange:function(t){return e.setAttributes({name:t})}}))},save:function(e){return Object(a.createElement)("div",{class:"service-item"},Object(a.createElement)("i",{class:"fa fa-"+e.attributes.icon}),Object(a.createElement)("div",{class:"serv-border"}),Object(a.createElement)("h3",null,e.attributes.name))}})},function(e,t){!function(){e.exports=this.wp.i18n}()}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["style-index"],{
+
+/***/ "./src/style.scss":
+/*!************************!*\
+  !*** ./src/style.scss ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ })
+
+}]);
+
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// install a JSONP callback for chunk loading
+/******/ 	function webpackJsonpCallback(data) {
+/******/ 		var chunkIds = data[0];
+/******/ 		var moreModules = data[1];
+/******/ 		var executeModules = data[2];
+/******/
+/******/ 		// add "moreModules" to the modules object,
+/******/ 		// then flag all "chunkIds" as loaded and fire callback
+/******/ 		var moduleId, chunkId, i = 0, resolves = [];
+/******/ 		for(;i < chunkIds.length; i++) {
+/******/ 			chunkId = chunkIds[i];
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 				resolves.push(installedChunks[chunkId][0]);
+/******/ 			}
+/******/ 			installedChunks[chunkId] = 0;
+/******/ 		}
+/******/ 		for(moduleId in moreModules) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
+/******/ 				modules[moduleId] = moreModules[moduleId];
+/******/ 			}
+/******/ 		}
+/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
+/******/
+/******/ 		while(resolves.length) {
+/******/ 			resolves.shift()();
+/******/ 		}
+/******/
+/******/ 		// add entry modules from loaded chunk to deferred list
+/******/ 		deferredModules.push.apply(deferredModules, executeModules || []);
+/******/
+/******/ 		// run deferred modules when all chunks ready
+/******/ 		return checkDeferredModules();
+/******/ 	};
+/******/ 	function checkDeferredModules() {
+/******/ 		var result;
+/******/ 		for(var i = 0; i < deferredModules.length; i++) {
+/******/ 			var deferredModule = deferredModules[i];
+/******/ 			var fulfilled = true;
+/******/ 			for(var j = 1; j < deferredModule.length; j++) {
+/******/ 				var depId = deferredModule[j];
+/******/ 				if(installedChunks[depId] !== 0) fulfilled = false;
+/******/ 			}
+/******/ 			if(fulfilled) {
+/******/ 				deferredModules.splice(i--, 1);
+/******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
+/******/ 			}
+/******/ 		}
+/******/
+/******/ 		return result;
+/******/ 	}
+/******/
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// object to store loaded and loading chunks
+/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 	// Promise = chunk loading, 0 = chunk loaded
+/******/ 	var installedChunks = {
+/******/ 		"index": 0
+/******/ 	};
+/******/
+/******/ 	var deferredModules = [];
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
+/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
+/******/ 	jsonpArray.push = webpackJsonpCallback;
+/******/ 	jsonpArray = jsonpArray.slice();
+/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
+/******/ 	var parentJsonpFunction = oldJsonpFunction;
+/******/
+/******/
+/******/ 	// add entry module to deferred list
+/******/ 	deferredModules.push(["./src/index.js","style-index"]);
+/******/ 	// run deferred modules when ready
+/******/ 	return checkDeferredModules();
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+
+
+var _wp$editor = wp.editor,
+    MediaPlaceholder = _wp$editor.MediaPlaceholder,
+    RichText = _wp$editor.RichText,
+    InspectorControls = _wp$editor.InspectorControls,
+    MediaUpload = _wp$editor.MediaUpload;
+var _wp$components = wp.components,
+    PanelBody = _wp$components.PanelBody,
+    IconButton = _wp$components.IconButton;
+
+
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('afasha/project-gallery', {
+  title: 'Project Gallery',
+  description: 'Project Gallery built for afasha theme.',
+  category: 'afasha_theme',
+  icon: 'format-gallery',
+  supports: {
+    html: true
+  },
+  attributes: {
+    images: {
+      type: 'array',
+      default: []
+    }
+  },
+  edit: function edit(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "row"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaPlaceholder, {
+      icon: "format-gallery",
+      className: "hello",
+      labels: {
+        title: 'Project Gallery',
+        instructions: 'Upload or select images to be displayed'
+      },
+      value: props.attributes.images,
+      allowedTypes: ['image'],
+      onSelect: function onSelect(e) {
+        return props.setAttributes({
+          images: e
+        });
+      },
+      type: "images",
+      multiple: true
+    }));
+  },
+  save: function save(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "project-gallery"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "row"
+    }, props.attributes.images.map(function (e) {
+      return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+        class: "col-md-2"
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+        class: "view view-first"
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+        src: e.url,
+        alt: ""
+      }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+        class: "mask"
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+        class: "i-icons"
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
+        class: "zoom",
+        href: e.url
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("i", {
+        class: "fa fa-plus"
+      }))))));
+    })));
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('afasha/progress-level', {
+  title: "Progress bar",
+  description: 'Progress bar for skill.',
+  category: 'afasha_theme',
+  icon: 'chart-bar',
+  supports: {
+    html: true
+  },
+  attributes: {
+    percentage: {
+      type: 'string',
+      default: "50%"
+    }
+  },
+  edit: function edit(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "h2",
+      placeholder: "50%",
+      value: props.attributes.percentage,
+      onChange: function onChange(e) {
+        return props.setAttributes({
+          percentage: e
+        });
+      }
+    });
+  },
+  save: function save(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "meter nostrips frontend"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+      style: "width: " + props.attributes.percentage
+    }));
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('afasha/profile-modal', {
+  title: "Profile Modal",
+  description: 'Progress bar for skill.',
+  category: 'afasha_theme',
+  icon: 'chart-bar',
+  supports: {
+    html: true
+  },
+  attributes: {
+    name: {
+      type: 'string',
+      default: "John Doe"
+    },
+    caption: {
+      type: 'string',
+      default: "am the goat"
+    },
+    url: {
+      type: 'string',
+      default: ""
+    }
+  },
+  edit: function edit(props) {
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InspectorControls, {
+      style: {
+        marginBottom: '40px'
+      }
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelBody, {
+      title: 'Background Image Settings'
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("strong", null, "Select a Background Image:")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
+      onSelect: function onSelect(e) {
+        return props.setAttributes({
+          url: e.sizes.full.url
+        });
+      },
+      type: "image",
+      value: props.attributes.url,
+      render: function render(_ref) {
+        var open = _ref.open;
+        return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(IconButton, {
+          className: "editor-media-placeholder__button is-button is-default is-large",
+          icon: "upload",
+          onClick: open
+        }, "Background Image");
+      }
+    }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "team-post"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+      alt: props.attributes.name,
+      src: props.attributes.url
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "team-hover"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "team-data"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "h2",
+      placeholder: "50%",
+      value: props.attributes.name,
+      onChange: function onChange(e) {
+        return props.setAttributes({
+          name: e
+        });
+      }
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "span",
+      placeholder: props.attributes.caption,
+      value: props.attributes.caption,
+      onChange: function onChange(e) {
+        return props.setAttributes({
+          caption: e
+        });
+      }
+    })))))];
+  },
+  save: function save(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "team-post"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+      alt: props.attributes.name,
+      src: props.attributes.url
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "team-hover"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "team-data"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h3", null, props.attributes.name), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", null, props.attributes.caption)))));
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('afasha/service-item', {
+  title: "Service Item",
+  description: 'Progress bar for skill.',
+  category: 'afasha_theme',
+  icon: 'chart-bar',
+  supports: {
+    html: true
+  },
+  attributes: {
+    icon: {
+      type: 'string',
+      default: "fa fa-coffee"
+    },
+    name: {
+      type: 'string',
+      default: "Coding"
+    }
+  },
+  edit: function edit(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "service-item"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("i", {
+      class: "fa fa-" + props.attributes.icon
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "p",
+      placeholder: "FontAwesome Icon Name",
+      value: props.attributes.icon,
+      onChange: function onChange(e) {
+        return props.setAttributes({
+          icon: e
+        });
+      }
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "serv-border"
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "h3",
+      placeholder: "Title",
+      value: props.attributes.name,
+      onChange: function onChange(e) {
+        return props.setAttributes({
+          name: e
+        });
+      }
+    }));
+  },
+  save: function save(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "service-item"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("i", {
+      class: props.attributes.icon
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "serv-border"
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h3", null, props.attributes.name));
+  }
+});
+
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!*****************************************!*\
+  !*** external {"this":["wp","blocks"]} ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["blocks"]; }());
+
+/***/ }),
+
+/***/ "@wordpress/element":
+/*!******************************************!*\
+  !*** external {"this":["wp","element"]} ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["element"]; }());
+
+/***/ }),
+
+/***/ "@wordpress/i18n":
+/*!***************************************!*\
+  !*** external {"this":["wp","i18n"]} ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["i18n"]; }());
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=index.js.map
