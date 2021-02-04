@@ -8,7 +8,7 @@
 
 <head>
 
-<title><?php bloginfo('name');wp_title(); ?></title>
+<title><?php bloginfo('name');?> <?php wp_title(); ?></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="description" content="<?php bloginfo('description'); ?>" />

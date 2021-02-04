@@ -293,6 +293,11 @@ ul.social-icons li:hover a i {
 .info {
     padding: 20px;
     border-bottom: 1px dashed #000;
+    text-align: right;
+}
+
+.info>*{
+    margin: 15px 0px;
 }
 
 .info a {

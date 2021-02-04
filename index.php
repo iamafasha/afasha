@@ -1,7 +1,7 @@
-<?php get_header(  ) ?>       
+<?php get_header() ?>       
         <!-- content 
 			================================================== -->
-        <!-- <div id="content"
+         <div id="content"
             style="background: url(<?php echo get_template_directory_uri() ?>/upload/body-bg.jpg) center 0 repeat;">
             <div class="inner-content">
                 <div class="portfolio-page">
@@ -219,7 +219,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div> 
         <!-- End content -->
 
 
