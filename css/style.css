@@ -724,7 +724,10 @@ ul li {
 }
 
 .post-tags {
-    padding: 15px 20px;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #fff;
     margin: 0;
     border-top: 1px dashed #cccccc;

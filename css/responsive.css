@@ -45,12 +45,19 @@
 		width: 49.9%;
 	}
 
+	.post-tags {
+		padding: 15px 30px;
+	}
 
 }
 
 @media (max-width: 991px) {
 	.blog-post {
 		width: 100%;
+	}
+
+	.blog-page{
+		padding: unset;
 	}
 
 	.project-post {
@@ -167,7 +174,8 @@
 	}
 	ul.post-tags {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
+
 	}
 	ul.menu {
 		max-height: 250px;
@@ -205,6 +213,11 @@
 
 @media (max-width: 581px) {
 
+	.blog-post{
+		padding: 0px 5px;
+		padding-top: 5px;
+	}
+
 	.project-post {
 	    width: 100%;
 	}
@@ -224,5 +237,13 @@
 	}
 
 
+
+
+}
+
+@media (max-width: 581px) {
+	.post-tags {
+		padding: 10px 10px;
+	}
 
 }
