@@ -40,6 +40,7 @@ add_action('pre_get_posts', 'tags_support_query');
 function themename_custom_logo_setup()
 {
     $defaults = array(
+    'width'       => 40,
     'flex-height' => true,
     'flex-width' => true,
     'header-text' => array('site-title', 'site-description'),
