@@ -20,13 +20,6 @@
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <?php wp_head(); ?>
     <style>
-    /* .inner-content {
-        background: url(<?php echo get_template_directory_uri() ?>/upload/body-bg.jpg) center 0 repeat;
-    }
-
-    .inner-content2 {
-        background: url(<?php echo get_template_directory_uri() ?>/upload/body-bg2.jpg) center 0 repeat;
-    } */
 
     .meter>span {
         background: url('<?php echo get_template_directory_uri() ?>/images/skills-pattern.png');
