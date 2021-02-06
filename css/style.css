@@ -16,12 +16,81 @@
 
 @font-face {
     font-family: 'noodle';
-    src: url('fonts/big_noodle_titling.eot');
-    src: local('☺'), url('fonts/big_noodle_titling.woff') format('woff'), url('fonts/big_noodle_titling.ttf') format('truetype'), url('fonts/big_noodle_titling.svg') format('svg');
+    src: url('fonts/noodle/big_noodle_titling.eot');
+    src: local('☺'), url('fonts/noodle/big_noodle_titling.woff') format('woff'), url('fonts/noodle/big_noodle_titling.ttf') format('truetype'), url('fonts/noodle/big_noodle_titling.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: MTNBrighterSans-ExtraLight;
+    src: url(fonts/mtn/MTNBrighterSans-ExtraLight.eot?#iefix);
+    src: url(fonts/mtn/MTNBrighterSans-ExtraLight.eot?#iefix) format("eot"), url(fonts/mtn/MTNBrighterSans-ExtraLight.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: MTNBrighterSans-Light;
+    src: url(fonts/mtn/MTNBrighterSans-Light.eot?#iefix);
+    src: url(fonts/mtn/MTNBrighterSans-Light.eot?#iefix) format("eot"), url(fonts/mtn/MTNBrighterSans-Light.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: MTNBrighterSans-Regular;
+    src: url(fonts/mtn/MTNBrighterSans-Regular.eot?#iefix);
+    src: url(fonts/mtn/MTNBrighterSans-Regular.eot?#iefix) format("eot"), url(fonts/mtn/MTNBrighterSans-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: MTNBrighterSans-RegularItalic;
+    src: url(fonts/mtn/MTNBrighterSans-RegularItalic.eot?#iefix);
+    src: url(fonts/mtn/MTNBrighterSans-RegularItalic.eot?#iefix) format("eot"), url(fonts/mtn/MTNBrighterSans-RegularItalic.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: MTNBrighterSans-Medium;
+    src: url(fonts/mtn/MTNBrighterSans-Medium.eot?#iefix);
+    src: url(fonts/mtn/MTNBrighterSans-Medium.eot?#iefix) format("eot"), url(fonts/mtn/MTNBrighterSans-Medium.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: MTNBrighterSans-MediumItalic;
+    src: url(fonts/mtn/MTNBrighterSans-MediumItalic.eot?#iefix);
+    src: url(fonts/mtn/MTNBrighterSans-MediumItalic.eot?#iefix) format("eot"), url(fonts/mtn/MTNBrighterSans-MediumItalic.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: MTNBrighterSans-Bold;
+    src: url(fonts/mtn/MTNBrighterSans-Bold.eot?#iefix);
+    src: url(fonts/mtn/MTNBrighterSans-Bold.eot?#iefix) format("eot"), url(fonts/mtn/MTNBrighterSans-Bold.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: MTNBrighterSans-ExtraBold;
+    src: url(fonts/mtn/MTNBrighterSans-ExtraBold.eot?#iefix);
+    src: url(fonts/mtn/MTNBrighterSans-ExtraBold.eot?#iefix) format("eot"), url(fonts/mtn/MTNBrighterSans-ExtraBold.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+
+body{
+    font-family: "MTNBrighterSans-Regular","Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 /*-------------------------------------------------------*/
 /* 1. Isotope filtering
@@ -88,7 +157,7 @@ img.custom-logo {
 p.slogan {
     color: #fff;
     font-size: 24px;
-    font-family: 'Courier New', sans-serif;
+    font-family: ' MTNBrighterSans-Regular', sans-serif;
     font-weight: 300;
     font-style: italic;
     margin: 0;
@@ -133,7 +202,7 @@ ul.drop-down li a {
     padding: 18px 24px;
     color: #fff;
     font-size: 26px;
-    font-family: 'noodle', sans-serif;
+    font-family: 'MTNBrighterSans-ExtraBold', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
     text-decoration: none;
@@ -709,13 +778,13 @@ ul li {
 
 .post-content {
     background: #fff;
-    padding: 15px 20px;
+    padding: 5px 11px;
 }
 
 .post-content h2 {
     color: #000;
     font-size: 18px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'MTNBrighterSans-Medium', sans-serif;
     font-weight: 300;
     line-height: 26px;
     margin: 0 0 4px;
@@ -728,11 +797,18 @@ ul li {
 .post-content p {
     color: #9c9c9c;
     font-size: 13px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'MTNBrighterSans-Regular', sans-serif;
     font-weight: 300;
     line-height: 22px;
     margin: 0;
 }
+
+
+.post-content >.tag{
+    text-transform: uppercase;
+    font-family: 'MTNBrighterSans-ExtraLight';
+}
+
 
 .post-tags {
     padding: 15px 10px;
@@ -1738,7 +1814,7 @@ line-height: 22px;
 .sidebar h1 {
     color: #000;
     font-size: 24px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'MTNBrighterSans-Bold', sans-serif;
     font-weight: 300;
     margin: 0 0 7px;
     line-height: 30px;
@@ -1746,9 +1822,8 @@ line-height: 22px;
 
 .project-post-content p,
 .about-section p {
-    color: #a3a3a3;
     font-size: 18px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'MTNBrighterSans-Regular', sans-serif;
     font-weight: 300;
     margin: 0 0 25px;
     line-height: 30px;
@@ -2035,7 +2110,7 @@ ul.depth li:before {
 .comment-content p {
     color: #a3a3a3;
     line-height: 26px;
-    font-family: 'Roboto';
+    font-family: 'MTNBrighterSans-ExtraLight';
 }
 
 
