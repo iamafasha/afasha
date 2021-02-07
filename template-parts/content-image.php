@@ -9,7 +9,8 @@
                             ?>
                             <div class="mask">
                                 <div class="i-icons">
-                                    <a class="zoom" href="<?php echo the_post_thumbnail_url(); ?>"><i class="fa fa-plus"></i></a>
+                                    <a class="zoom" href="<?php the_post_thumbnail_url(); ?>"><i class="fa fa-plus"></i></a>
+                                    <a href="<?php the_permalink() ?>"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                         </div>
