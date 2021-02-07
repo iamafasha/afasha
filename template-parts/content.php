@@ -10,7 +10,7 @@
                        
                     </div>
                         <div class="post-content">
-                            <div class="tag"><?php $category = get_the_category();echo $category[0]->cat_name;?></div>
+                            <?php get_template_part( 'template-parts/category', '' ); ?>
                             <h2><a href="<?php the_permalink(  ) ?>"><?php the_title() ?></a></h2>
                         </div>
                         <?php get_template_part( 'template-parts/footer', '' ); ?>

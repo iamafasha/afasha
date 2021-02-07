@@ -2,8 +2,8 @@
                 <div class="blog-post link-post">
                     <div class="inner-post">
                         <div class="post-content">
-                            <p><?php the_content() ?></p>
+                            <?php the_content() ?>
+                            <a href="<?php the_permalink(); ?>/#respond">Respond</a>
                         </div>
-                         <?php get_template_part( 'template-parts/footer', '' ); ?>
                     </div>
                 </div>

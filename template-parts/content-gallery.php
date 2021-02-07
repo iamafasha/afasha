@@ -15,6 +15,7 @@
                             <?php endif; ?>
                         </div>
                         <div class="post-content">
+                            <?php get_template_part( 'template-parts/category', '' ); ?>
                             <h2><a href="<?php the_permalink( ) ?>"><?php the_title(); ?></a></h2>
                         </div>
                         <?php get_template_part( 'template-parts/footer', '' ); ?>

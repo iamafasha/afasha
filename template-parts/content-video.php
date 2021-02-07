@@ -5,8 +5,8 @@
                         <?php echo afasha_get_embedded_media( array('video','iframe') ); ?>
                         <!-- End youtube -->
                         <div class="post-content">
+                            <?php get_template_part( 'template-parts/category', '' ); ?>
                             <h2><a href="<?php the_permalink('') ?>"><?php the_title(); ?></a></h2>
-                            <p><?php the_excerpt() ?></p>
                         </div>
                         <?php get_template_part( 'template-parts/footer', '' ); ?>
                     </div>
