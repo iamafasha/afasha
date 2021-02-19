@@ -110,6 +110,7 @@
 	.about-content,
 	.single-box-content {
 	    width: 100%;
+		padding: 30px 10px;
 	    float: none;
 	    border-right: none;
     	border-bottom: 1px solid #e5e5e5;

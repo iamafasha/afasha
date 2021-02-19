@@ -9,7 +9,7 @@ function afasha_load_styles_and_scripts($hook)
     wp_enqueue_style( 'fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' , array(), 'all' );
     wp_enqueue_style( 'flexslider', get_template_directory_uri().'/css/flexslider.css' , array(),'1.0' , 'all' );
     wp_enqueue_style( 'style', get_template_directory_uri().'/css/style.css' , array(), '1.4', 'all' );
-    wp_enqueue_style( 'responsive', get_template_directory_uri().'/css/responsive.css' , array(), 'all' );
+    wp_enqueue_style( 'responsive', get_template_directory_uri().'/css/responsive.css' , array(),"1.0" ,'all' );
     wp_enqueue_style( 'google_font', 'https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' , array(), 'all' );
    //js
     wp_enqueue_script( 'jquery',  get_template_directory_uri().'/js/jquery.min.js', array(), true );
