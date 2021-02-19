@@ -116,6 +116,11 @@
     	border-bottom: 1px solid #e5e5e5;
 	}
 
+
+	.project-post-content {
+		padding: 10px 7px 10px;
+	}
+
 	.sidebar {
 		float: none;
 		width: 100%;
