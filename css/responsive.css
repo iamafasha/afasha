@@ -186,8 +186,8 @@
 
 	}
 	ul.menu {
-		max-height: 250px;
-		overflow-y: scroll; 
+		max-height: 60vh;
+		overflow-y: auto; 
 	}
 
 	.filter-box {

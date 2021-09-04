@@ -153,7 +153,7 @@ header {
 
 .menu-brand-wrapper>a{
     content: "";
-    width: 23%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,11 +161,12 @@ header {
 
 .menu-brand-wrapper>a i{
     border-radius:5px;
+    padding: 10% 20%;
+    border: 1px solid #fff;
 }
 
 .menu-brand-wrapper>a:hover i{
     background: #fff;
-    padding: 10% 20%;
 }
 
 .logo-box {
