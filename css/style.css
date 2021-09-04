@@ -125,6 +125,9 @@ body{
 header {
     display: block;
     width: 300px;
+    max-height: 100vh;
+    position: fixed !important;
+    min-height: 100vh
     float: left;
     background: #222222;
     text-align: right;

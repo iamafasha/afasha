@@ -11,6 +11,7 @@ function afasha_load_styles_and_scripts($hook)
     wp_enqueue_style('google_font', 'https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic', array(), 'all');
     //js
     wp_enqueue_script('font-awesomejs', 'https://kit.fontawesome.com/0672d868fb.js', array(), true);
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), true);
     wp_enqueue_script('jquery_migrate', get_template_directory_uri() . '/js/jquery.migrate.js', array(), true);
     wp_enqueue_script('jquery_imagesloaded', get_template_directory_uri() . '/js/jquery.imagesloaded.min.js', array(), true);
     wp_enqueue_script('jquery_isotope', get_template_directory_uri() . '/js/jquery.isotope.min.js', array(), true);
