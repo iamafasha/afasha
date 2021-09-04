@@ -127,7 +127,7 @@ header {
     width: 300px;
     max-height: 100vh;
     position: fixed !important;
-    min-height: 100vh
+    min-height: 100vh;
     float: left;
     background: #222222;
     text-align: right;
@@ -140,15 +140,46 @@ header {
     -o-box-shadow: 0 0 10px #000;
 }
 
+.menu-brand-wrapper{
+    display:flex;
+    align-items: center;
+}
+
+
+.menu-brand-wrapper h1{
+    padding:0px 0px 0px 0px !important;
+    margin:0px !important;
+}
+
+.menu-brand-wrapper>a{
+    content: "";
+    width: 23%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-brand-wrapper>a i{
+    border-radius:5px;
+}
+
+.menu-brand-wrapper>a:hover i{
+    background: #fff;
+    padding: 10% 20%;
+}
+
 .logo-box {
-    padding: 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
     background: #222222;
     text-align: center;
+    min-height: 100px;
 }
 
 a.logo {
     display: inline-block;
-    margin-bottom: 10px;
 }
 
 img.custom-logo {
@@ -175,19 +206,18 @@ ul.categories {
 }
 
 a.elemadded {
+    padding:unset !important;
+    margin:unset !important;
     display: none;
-    color: #000;
     font-size: 28px;
     font-family: 'Courier New', sans-serif;
     text-transform: uppercase;
-    padding: 20px;
-    background: #27bbff;
     text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
     transition: all 0.17s ease-in-out;
     -moz-transition: all 0.17s ease-in-out;
     -webkit-transition: all 0.17s ease-in-out;
     -o-transition: all 0.17s ease-in-out;
+    line-height: normal;
 }
 
 
