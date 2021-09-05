@@ -153,7 +153,7 @@ header {
 
 .menu-brand-wrapper>a{
     content: "";
-    width: 30%;
+    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,7 +171,7 @@ header {
 
 .logo-box {
     display: flex;
-    width:60%;
+    width:75%;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
