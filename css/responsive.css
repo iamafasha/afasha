@@ -156,6 +156,19 @@
 		position: unset !important;
 		min-height: unset;
 	}
+	.minify{
+		position: fixed !important;
+		top: 0;
+	}
+
+	#content{
+		
+	}
+
+	.minify .social-box {
+		height: 0px;
+		overflow:hidden;
+	}
 
 	.logo-box p.slogan {
 		display: none;

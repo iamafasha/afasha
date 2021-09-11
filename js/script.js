@@ -119,6 +119,30 @@ $(document).ready(function($) {
 	});
 
 	/*-------------------------------------------------*/
+	/* = mobile  Minify header is not at the top
+	/*-------------------------------------------------*/
+	var lastKnownScrollPosition = 0;
+	var ticking = false;
+	
+	document.addEventListener('scroll', function() {
+	  lastKnownScrollPosition = window.scrollY;
+	  if (!ticking) {
+		window.requestAnimationFrame(function() {
+			var menuBrandHeight = $('.menu-brand-wrapper').outerHeight();
+			if (lastKnownScrollPosition > menuBrandHeight) {
+				$('header').addClass('minify');
+				var current_height = $('.menu-brand-wrapper').outerHeight();
+				$('#content').css('padding-top',current_height*2 +5);
+			}else{
+				$('header').removeClass('minify');
+				$('#content').css('padding-top','unset');
+			}
+		  ticking = false;
+		});
+		ticking = true;
+	  }
+	});
+	/*-------------------------------------------------*/
 	/* =  header height fix
 	/*-------------------------------------------------*/
 	var content = $('#content');
