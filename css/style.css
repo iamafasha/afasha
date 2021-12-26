@@ -131,7 +131,7 @@ header {
     float: left;
     background: #2c2c2c;
     text-align: right;
-    min-height: fit-content;
+    /* min-height: fit-content; */
     z-index: 4;
     position: relative;
     /* box-shadow: 0 0 10px #000;
