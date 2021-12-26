@@ -20,9 +20,8 @@ $(document).ready(function($) {
 		margin: 2,
 		columns: 4,
 		breakAt: {
-			1200: 5,
-			940: 3,
-			720: 2,
+			1367: 3,
+			767: 2,
 			520: 2,
 			400: 1
 		}
