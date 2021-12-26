@@ -16,6 +16,14 @@
             </div>
             <?php  next_posts_link("Older Posts") ?>
         </div>
+<!-- 
+        <div class="posts-loader w-100">
+            <div class="loader-container ">
+                <span id="more-posts-loader" class="loader"  style="padding-right:5px"><i class="fa fa-spinner fa-pulse" aria-hidden="true"></i></span>
+                <span>Loading</span>
+            </div>
+        </div>
+ -->
     </div>
 </div>
 

@@ -72,3 +72,9 @@ add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 function posts_link_attributes() {
   return 'class="blog-page-link"';
 }
+
+function add_ajax_locally($hook)
+{
+  wp_localize_script('ajax-script', 'my_ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
+}
+do_action( 'wp_enqueue_scripts', 'add_ajax_locally' );

@@ -1,14 +1,12 @@
+<?php global $wp_query;?>
+
 <!doctype html>
-
-
 <html lang="en" class="no-js">
-
-
-
-
 <head>
-
-<title><?php bloginfo('name');?> <?php wp_title();?></title>
+    <title>
+        <?php bloginfo('name');?>
+        <?php wp_title();?>
+    </title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="<?php bloginfo('charset');?>" />
     <?php if (is_single()): ?>
@@ -29,7 +27,11 @@
     </style>
 </head>
 
-<body data-url="<?php echo admin_url('admin-ajax.php'); ?>" <?php body_class();?>>
+<body data-page="0" 
+    data-last_page="<?php echo $wp_query->max_num_pages; ?>"
+    data-ajax_url="<?php echo admin_url('admin-ajax.php'); ?>" 
+    <?php body_class();?>
+    >
     <?php wp_body_open();?>
     <!-- Container -->
     <div id="container">

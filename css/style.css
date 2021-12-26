@@ -11,7 +11,7 @@
  8.Services page                    
  9.Single Post page                 
  10.Single Work page
-
+ 11.Posts Loader
 -------------------------------------------------*/
 
 @font-face {
@@ -129,15 +129,15 @@ header {
     position: fixed !important;
     min-height: 100vh;
     float: left;
-    background: #222222;
+    background: #2c2c2c;
     text-align: right;
     min-height: fit-content;
     z-index: 4;
     position: relative;
-    box-shadow: 0 0 10px #000;
+    /* box-shadow: 0 0 10px #000;
     -webkit-box-shadow: 0 0 10px #000;
     -moz-box-shadow: 0 0 10px #000;
-    -o-box-shadow: 0 0 10px #000;
+    -o-box-shadow: 0 0 10px #000; */
 }
 
 .menu-brand-wrapper{
@@ -175,7 +175,6 @@ header {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    background: #222222;
     text-align: center;
     min-height: 100px;
 }
@@ -246,19 +245,18 @@ ul.drop-down li a {
     -moz-transition: all 0.3 linear;
     -webkit-transition: all 0.3 linear;
     -o-transition: all 0.3 linear;
-    background: #222222;
-    border-bottom: 1px dashed #000;
+    border-bottom: 1px dashed #333;
     border-right: 1px dashed #000;
 }
 
 ul.menu li:first-child a {
-    border-top: 1px dashed #000;
+    border-top: 1px dashed #444;
 }
 
 ul.menu > li > a.active {
     background: #27bbff;
     border-bottom: 1px dashed #d6d6d6;
-    color: #000;
+    color: #444;
 }
 
 ul.menu > li > a:hover {
@@ -267,8 +265,8 @@ ul.menu > li > a:hover {
     -webkit-transition: all 0.15s linear;
     -o-transition: all 0.15s linear;
     background: #27bbff;
-    border-bottom: 1px dashed #000;
-    color: #000;
+    border-bottom: 1px dashed #555;
+    color: #444;
 }
 
 ul.menu > li > a.active:after {
@@ -449,24 +447,16 @@ html{
 body {
     background: #fff;
     height: 100%;
-    opacity: 0;
-}
-
-body.active {
     opacity: 1;
 }
 
 #container {
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.17s ease-in-out;
     -moz-transition: all 0.17s ease-in-out;
     -webkit-transition: all 0.17s ease-in-out;
     -o-transition: all 0.17s ease-in-out;
-}
-
-#container.active {
-    opacity: 1;
 }
 
 ul {
@@ -792,9 +782,15 @@ ul li {
     position: relative;
 }
 
+/* .blog-box{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: masonry;
+    grid-template-rows: repeat(3, 100px);
+} */
 .blog-post {
-    width: 20%;
-    padding: 12px;
+    width: 100%;
+    padding:5px;
 }
 
 
@@ -803,7 +799,16 @@ ul li {
 }
 
 .inner-post {
-    box-shadow: 0 0 8px #787878;    
+    /* box-shadow: 0 0 8px #787878;     */
+    border: 2px solid #64646477;
+    border-radius: 4px;
+    overflow: hidden;
+    background: white;
+}
+
+.inner-post audio, .inner-post video {
+    width: 100%;
+    max-height: 170px;
 }
 
 .blog-post img {
@@ -2160,4 +2165,16 @@ ul.depth li:before {
     font-family: 'MTNBrighterSans-ExtraLight';
 }
 
+/*-------------------------------------------------*/
+/* =  Posts Loader
+/*-------------------------------------------------*/
 
+.posts-loader{
+    height: 50vh;
+    position: relative;
+}
+
+.posts-loader .loader-container{
+    display: flex;
+    justify-content: center;
+}
