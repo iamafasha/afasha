@@ -11,8 +11,7 @@
         // if it is active, use the wpseo title
         wpseo_title();
     } else {
-        bloginfo('name');
-        wp_title('|', true, 'left'); 
+        wp_title(' |', true, 'left'); 
     }
 
 
