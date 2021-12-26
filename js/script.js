@@ -7,25 +7,37 @@ $(document).ready(function($) {
 	"use strict";
 
 	
+	
+	var macy;
+	var winDow = $(window);
+
+	// .blog-box change, recalculate macy
+	$('.blog-box').on('change', function() {
+		macy.recalculate(true);
+	})
+
 	/*-------------------------------------------------*/
-	/* =  portfolio isotope
+	/* = Grid  
 	/*-------------------------------------------------*/
 
-	var winDow = $(window);
-	// Needed variables
-	  var macy = Macy({
-		container: '.blog-box,.portfolio-box',
-		trueOrder: false,
-		waitForImages: false,
-		margin: 2,
-		columns: 4,
-		breakAt: {
-			1367: 3,
-			767: 2,
-			520: 2,
-			400: 1
-		}
-	});
+	//If .blog-box or .portfolio-box has fully loaded
+	$('.grid').imagesLoaded( function() {
+		macy = Macy({
+			container: '.blog-box,.portfolio-box',
+			trueOrder: false,
+			waitForImages: false,
+			margin: 2,
+			columns: 4,
+			breakAt: {
+				1367: 3,
+				767: 2,
+				520: 2,
+				400: 1
+			}
+		});
+
+		console.log("fully loaded");
+	})
 
 	/*-------------------------------------------------*/
 	/* =  flexslider

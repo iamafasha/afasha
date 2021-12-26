@@ -13,6 +13,7 @@
  10.Single Work page
  11.Posts Loader
  12. Pagination
+ 13 Audio Player
 -------------------------------------------------*/
 
 @font-face {
@@ -2283,4 +2284,19 @@ ul.depth li:before {
     -moz-border-radius: 0px  0px 3px 3px;
     -ms-border-radius: 0px  0px 3px 3px;
     -o-border-radius: 0px  0px 3px 3px;
+}
+
+
+/*-------------------------------------------------*/
+/* =  13 Audio Player
+/*-------------------------------------------------*/
+
+.inner-post .audio-player{
+    background: #eeeeee;
+}
+
+.audio-player audio::-webkit-media-controls-play-button,
+.audio-player audio::-webkit-media-controls-panel {
+background-color: #eeeeee;
+color: #eeeeee;
 }

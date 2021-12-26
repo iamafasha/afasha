@@ -2,7 +2,9 @@
                 <div class="blog-post video-post">
                     <div class="inner-post">
                         <!-- youtube -->
-                        <?php echo afasha_get_embedded_media( array('audio','iframe') ); ?>
+                        <div class="audio-player">
+                            <?php echo afasha_get_embedded_media( array('audio','iframe') ); ?>
+                        </div>
                         <!-- End youtube -->
                         <div class="post-content">
                             <?php get_template_part( 'template-parts/category', '' ); ?>
