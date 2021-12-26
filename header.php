@@ -4,6 +4,21 @@
 <html lang="en" class="no-js">
 <head>
     <title>
+     
+<?php 
+// check if yoast is active 
+if ( !function_exists('is_wpseo_active') ) { 
+    // if not, use the default title
+    wp_title('');
+} else {
+    // if it is active, use the wpseo title
+    wpseo_title();
+}
+
+
+?>
+
+
         <?php bloginfo('name');?>
         <?php wp_title();?>
     </title>
