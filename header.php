@@ -7,12 +7,12 @@
      
 <?php 
     // check if yoast is active 
-    if ( !function_exists('is_wpseo_active') ) { 
-        bloginfo('name');
-        wp_title(); 
-    } else {
+    if (function_exists('is_wpseo_active') && is_home() ) { 
         // if it is active, use the wpseo title
         wpseo_title();
+    } else {
+        bloginfo('name');
+        wp_title('|', true, 'left'); 
     }
 
 
