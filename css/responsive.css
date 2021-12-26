@@ -227,7 +227,11 @@
 		padding: 18px 0;
 	}
 
-
+	.pagination .pagination-wrapper{
+		left: unset;
+		top: unset;
+		bottom: 20px;
+	}
 
 
 }

@@ -15,7 +15,7 @@ $(document).ready(function($) {
 	// Needed variables
 	  var macy = Macy({
 		container: '.blog-box,.portfolio-box',
-		trueOrder: true,
+		trueOrder: false,
 		waitForImages: false,
 		margin: 2,
 		columns: 4,
@@ -189,6 +189,29 @@ $(document).ready(function($) {
 	} catch(err) {
 
 	}
+
+	/* ---------------------------------------------------------------------- */
+	/*	pagination
+	/* ---------------------------------------------------------------------- */
+
+	var pagination = $('.pagination .pagination-wrapper');
+
+
+	$.data(this, 'scrollTimer', setTimeout(function() {
+		pagination.addClass('hidden');
+	}, 3000));
+
+	$(window).scroll(function() {
+		
+		if (pagination.hasClass('hidden')) {
+			pagination.removeClass('hidden');
+		}
+
+		clearTimeout($.data(this, 'scrollTimer'));
+		$.data(this, 'scrollTimer', setTimeout(function() {
+			pagination.addClass('hidden');
+		}, 3000));
+	});
 
 	/* ---------------------------------------------------------------------- */
 	/*	menu responsive

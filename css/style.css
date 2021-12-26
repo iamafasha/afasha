@@ -12,6 +12,7 @@
  9.Single Post page                 
  10.Single Work page
  11.Posts Loader
+ 12. Pagination
 -------------------------------------------------*/
 
 @font-face {
@@ -2177,4 +2178,109 @@ ul.depth li:before {
 .posts-loader .loader-container{
     display: flex;
     justify-content: center;
+}
+
+
+/*-------------------------------------------------*/
+/* =  12 Pagination
+/*-------------------------------------------------*/
+
+.pagination{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    margin: unset;
+    width: 100%;
+    position: relative;
+    height: fit-content;
+}
+.inner-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagination .pagination-wrapper{
+    position: fixed;
+    display: block;
+    display: flex;
+    z-index:9000;
+    top: 54px;
+}
+
+/* Pagination on mobile */
+
+
+.pagination *{
+    box-sizing: border-box;
+}
+
+
+
+.pagination-wrapper .blog-page-link{
+    display: block;
+    width: unset;
+    margin: unset;
+    padding: unset;
+    border: unset;
+    height: 4vh;
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: unset;
+    -webkit-border-radius: unset;
+    -moz-border-radius: unset;
+    -ms-border-radius: unset;
+    -o-border-radius: unset;
+}
+
+
+
+.pagination-wrapper:hover{
+    visibility: visible !important;
+    display: block !important;
+    display: flex !important;
+}
+
+.pagination-wrapper .blog-page-link:hover{
+    background: #888;
+}
+
+.pagination-wrapper .blog-page-link:first-child{
+    border-radius: 3px  3px 0px 0px;
+    -webkit-border-radius: 3px  3px 0px 0px;
+    -moz-border-radius: 3px  3px 0px 0px;
+    -ms-border-radius: 3px  3px 0px 0px;
+    -o-border-radius: 3px  3px 0px 0px;
+}
+
+.pagination-wrapper .blog-page-link::before{
+    font-size:0.5em;
+    position: absolute;
+    top: 50px;
+    display: none;
+}
+
+.pagination-wrapper .blog-page-link:hover::before{
+    display: block;
+}
+
+.pagination-wrapper .blog-page-link:first-child::before{
+    content: 'Newer Page';
+}
+
+
+.pagination-wrapper .blog-page-link:last-child::before{
+    content: 'Older Page';
+}
+
+.pagination-wrapper .blog-page-link:last-child{
+    border-radius: 0px  0px 3px 3px;
+    -webkit-border-radius: 0px  0px 3px 3px;
+    -moz-border-radius: 0px  0px 3px 3px;
+    -ms-border-radius: 0px  0px 3px 3px;
+    -o-border-radius: 0px  0px 3px 3px;
 }
