@@ -2207,7 +2207,7 @@ ul.depth li:before {
     position: fixed;
     display: block;
     display: flex;
-    z-index:9000;
+    z-index:10;
     top: 54px;
 }
 
