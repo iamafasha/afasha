@@ -9,6 +9,8 @@
 $formats = array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat');
 add_theme_support('post-formats', $formats);
 add_theme_support('post-thumbnails');
+add_theme_support( 'wp-block-styles' );
+add_theme_support( 'align-wide' );
 
 //Navigation menus
 function l_register_nav_menu()
@@ -48,8 +50,6 @@ function themename_custom_logo_setup()
     add_theme_support('custom-logo', $defaults);
 }
 add_action('after_setup_theme', 'themename_custom_logo_setup');   
-
-
 
 add_filter( 'comment_form_fields', 'move_comment_field' );
 function move_comment_field( $fields ) {
