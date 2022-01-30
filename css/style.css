@@ -2300,3 +2300,7 @@ ul.depth li:before {
 background-color: #eeeeee;
 color: #eeeeee;
 }
+
+[id^=js-googlesitekit-] {
+    display: unset !important;
+}
